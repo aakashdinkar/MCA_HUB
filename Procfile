@@ -1,1 +1,1 @@
-web: gunicorn MCA_HUB.wsgi --preload
+web: gunicorn MCA_HUB.wsgi
