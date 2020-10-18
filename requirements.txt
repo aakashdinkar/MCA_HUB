@@ -5,3 +5,4 @@ pycryptodome
 gcloud
 sseclient
 gunicorn
+requests-toolbelt
