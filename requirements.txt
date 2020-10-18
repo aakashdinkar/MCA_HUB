@@ -1,4 +1,4 @@
 python_jwt
 firebase
 crypto
-django
+gunicorn
