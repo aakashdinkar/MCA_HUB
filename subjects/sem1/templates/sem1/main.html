@@ -1,0 +1,21 @@
+{% extends 'mcauser/index.html' %}
+{% block content %}
+    <div class="row justify-content-center">
+        <h1>SEM 1</h1>
+    </div><br><br>
+    <div class="row justify-content-center">
+        <button type="button" class="btn btn-info" onclick="location.href='{% url 'sem-pm' %}'">Programming Methodology</button>
+    </div><br><br>
+    <div class="row justify-content-center">
+        <button type="button" class="btn btn-info" onclick="location.href='{% url 'sem-mfcs' %}'">Mathematical Foundation of CS</button>
+    </div><br><br>
+    <div class="row justify-content-center">
+        <button type="button" class="btn btn-info" onclick="location.href='{% url 'sem-coa' %}'">Computer Organisation Architecture</button>
+    </div><br><br>
+    <div class="row justify-content-center">
+        <button type="button" class="btn btn-info" onclick="location.href='{% url 'sem-cbnsm' %}'">CBNSM</button>
+    </div><br><br>
+    <div class="row justify-content-center">
+        <button type="button" class="btn btn-info" onclick="location.href='{% url 'sem-pmlab' %}'">PM - Lab</button>
+    </div>
+{% endblock content %}
