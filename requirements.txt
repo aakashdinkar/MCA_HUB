@@ -1,5 +1,4 @@
 python_jwt
 firebase
-sseclient
 crypto
 django
