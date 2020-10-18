@@ -43,7 +43,9 @@ def ebooks(request):
             lists[items] = results[items]
     result = {}
     for item in lists:
-        if len(lists[item]) == 4:
+        if item == 'PM' and len(lists[item]) == 4:
+            result[item] = extract(item, lists[item]['pptlist']['C'])
+        elif len(lists[item]) == 4:
             result[item] = extract(item, lists[item]['pptlist'])
         else:
             continue

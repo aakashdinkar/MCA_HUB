@@ -1,5 +1,4 @@
 from django.shortcuts import render
-# from . import thumb, download
 
 def download_url(inp_url):
     download_url = 'https://drive.google.com/uc?export=download&id='
@@ -43,9 +42,7 @@ def algo(request):
         for items in results:
             lists[items] = results[items]
     result = {}
-    # result['Algorithms'] = lists['Algorithms']
     for item in lists['Algorithms']:
-        # print()
         result[item] = extract(lists['Algorithms'][item])
     return render(request, 'subjects/Algorithms.html', result)
 
@@ -136,8 +133,8 @@ def ds(request):
         for items in results:
             lists[items] = results[items]
     result = {}
-    for item in lists['Data File and Structures']:
-        result[item] = extract(lists['DataFileandStructures'][item])
+    for item in lists['Data File And Structures']:
+        result[item] = extract(lists['Data File And Structures'][item])
     return render(request, 'subjects/DataFileandStructures.html', result)
 
 def dw(request):
@@ -188,9 +185,9 @@ def it(request):
         for items in results:
             lists[items] = results[items]
     result = {}
-    for item in lists['Information Technology']:
-        result[item] = extract(lists['Information Technology'][item])
-    return render(request, 'subjects/InformationTechnology.html', result)
+    for item in lists['Internet Technology']:
+        result[item] = extract(lists['Internet Technology'][item])
+    return render(request, 'subjects/InternetTechnology.html', result)
 
 def ai(request):
     from firebase import firebase
@@ -280,7 +277,10 @@ def pm(request):
             lists[items] = results[items]
     result = {}
     for item in lists['PM']:
-        result[item] = extract(lists['PM'][item])
+        if item == 'pptlist':
+            result[item] = extract(lists['PM'][item]['C'])
+        else:
+            result[item] = extract(lists['PM'][item])
     return render(request, 'subjects/PM.html', result)
 
 def project(request):

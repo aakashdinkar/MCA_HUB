@@ -46,5 +46,4 @@ def ebooks(request):
             result[item] = extract(item, lists[item]['ebooklist'])
         else:
             continue
-    print(result)
     return render(request, 'Ebooks/ebooks.html', {'result':result})

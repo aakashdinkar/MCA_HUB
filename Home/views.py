@@ -10,6 +10,4 @@ def index(request):
         for items in results.keys():
             if items != 'Communication Skills(Lab)':
                 lists.append([items, items.replace(" ", "")])
-    # random_subjects = random.sample(lists, 10)
-    # print(random_subjects)
     return render(request, 'Home/HomePage.html', {'result': lists})
