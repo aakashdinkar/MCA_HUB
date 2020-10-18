@@ -2,5 +2,5 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url('Home', views.index, name="main-homepage")
+    url('Upload', views.upload, name="upload-page"),
 ]

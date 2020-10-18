@@ -1,10 +1,10 @@
 {% extends "Home/index.html" %}
 {% block content %}
-    <div style="text-align: center;">
+    <div class="row justify-content-center" style="text-align: center; width: 500px; margin-left:30%;">
         <br><br>
         {% for item in result %}
         <h1>
-            <a href="{% url item.1 %}" target="_blank"><button class="btn btn-info" style="margin-left: 50px; width: 150px;">{{item.0}}</button></a>
+            <a href="{% url item.1 %}" target="_blank"><button class="btn btn-info" style="margin-left: 50px; width: 200px;">{{item.0}}</button></a>
         </h1>
         {% endfor %}
     </div>

@@ -11,4 +11,5 @@ urlpatterns = [
     url('', include('PPTs.urls')),
     url('', include('Practicals.urls')),
     url('', include('QuestionPapers.urls')),
+    url('', include('Upload.urls')),
 ]

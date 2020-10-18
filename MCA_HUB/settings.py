@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Practicals',
     'QuestionPapers',
     'subjects',
+    'Upload',
 ]
 
 MIDDLEWARE = [

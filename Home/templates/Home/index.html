@@ -8,9 +8,9 @@
 </head>
 <body style="background-color: lightgoldenrodyellow !important;">
     <nav class="navbar justify-content-center navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">
+        <a href="/"><span class="navbar-brand mb-0 h1">
             MCA Hub
-        </span>
+        </span></a>
     </nav>
     <nav class="navbar justify-content-center navbar-dark bg-dark"> 
         <a href="{% url 'sub-ebooks' %}"><span class="navbar-brand mb-0 h1">
@@ -27,6 +27,9 @@
         </span></a>
         <a href="{% url 'sub-questionpapers' %}"><span class="navbar-brand mb-0 h1">
             QuestionPapers
+        </span></a>
+        <a href="{% url 'upload-page' %}"><span class="navbar-brand mb-0 h1">
+            Upload
         </span></a>
     </nav>
     <div >

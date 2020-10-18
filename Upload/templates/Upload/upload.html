@@ -1,0 +1,26 @@
+{% extends "Home/index.html" %}
+{% block content %}
+<br>
+    <div style="text-align: center;">
+        <h1>Upload your document</h1>
+    </div>
+    	<div class="justify-content-center" style="margin-left: 35%;">
+            <select name="" id="">
+                <option value="">Choose your subject</option>
+                {% for item in result %}
+                <option value="">{{item}}</option>
+                {% endfor %}
+            </select>
+            <select name="" id="">
+                <option value="">Category</option>
+                <option value="">ebook</option>
+                <option value="">ppt</option>
+                <option value="">notes</option>
+                <option value="">questionpaper</option>
+            </select>
+            <br>
+            <input type="file">
+            <br>
+            <input type="submit" name="" id="">
+        </div>
+{% endblock content %}
