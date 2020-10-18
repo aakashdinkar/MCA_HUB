@@ -1,0 +1,7 @@
+glcoud
+python_jwt
+firebase
+sseclient
+crypto
+firebasepycryptodome
+django
