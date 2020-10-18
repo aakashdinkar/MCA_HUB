@@ -1,4 +1,3 @@
-glcoud
 python_jwt
 firebase
 sseclient
