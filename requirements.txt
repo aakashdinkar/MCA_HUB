@@ -6,4 +6,3 @@ gcloud
 sseclient
 gunicorn
 requests-toolbelt
-dj_database_url

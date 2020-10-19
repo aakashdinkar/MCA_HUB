@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'QuestionPapers',
     'subjects',
     'Upload',
-    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -58,10 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'MCA_HUB.urls'
 
@@ -134,7 +131,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'project_name/static')]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
