@@ -1,5 +1,5 @@
-django
 django_heroku
+django
 python_jwt
 firebase
 pycryptodome
