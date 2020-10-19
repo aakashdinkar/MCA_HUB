@@ -1,0 +1,30 @@
+{% extends "Home/index.html" %}
+{% block content %}
+<br>
+    <div style="text-align: center;">
+        <h1>Upload your document</h1>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    	<div class="justify-content-center" style="margin-left: 35%;">
+            <select name="" id="">
+                <option value="">Choose your subject</option>
+                {% for item in result %}
+                <option value="">{{item}}</option>
+                {% endfor %}
+            </select>
+            <select name="" id="">
+                <option value="">Category</option>
+                <option value="">ebook</option>
+                <option value="">ppt</option>
+                <option value="">notes</option>
+                <option value="">questionpaper</option>
+            </select>
+            <br>
+            <table>
+            {{ form.as_table }}
+            </table>
+            <input type="submit" class="btn btn-primary btn-lg" name="register">
+        </div>
+    </form>
+{% endblock content %}
