@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'QuestionPapers',
     'subjects',
     'Upload',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +126,15 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+AWS_ACCESS_KEY_ID = 'AKIAZ5GCJUNAOU6WQGNV'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'mcahub'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 # Static files (CSS, JavaScript, Images)
