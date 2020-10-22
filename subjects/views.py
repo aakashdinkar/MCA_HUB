@@ -147,7 +147,9 @@ def dw(request):
             lists[items] = results[items]
     result = {}
     for item in lists['Data Warehousing']:
-        result[item] = extract(lists['Data Warehousing'][item])
+        print(lists['Data Warehousing'][item])
+        if lists['Data Warehousing'][item]['data']:
+            result[item] = extract(lists['Data Warehousing'][item])
     return render(request, 'subjects/DataWarehousing.html', result)
 
 def dbmslab(request):

@@ -5,7 +5,7 @@
     </div>
     <br>
     {% if result %}
-    <div class="accordion" id="accordionExample" style="width: 800px; margin-left: 25%">
+        <div class="accordion" id="accordionExample" style="width: 800px; margin-left: 25%">
         <div class="card">
           <div class="card-header" id="headingOne">
             <h2 class="mb-0">
@@ -19,6 +19,7 @@
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
                 <br>
+                {% if ebooklist.thumbnail %}
                 {% for item in ebooklist.thumbnail %}
                 <div class="row justify-content-center">
                     <img src="{{item.0}}" alt="">
@@ -30,6 +31,14 @@
                 </div>
                 <br>
                 {% endfor %}
+              {% else %}
+              <h1 style="text-align: center;">
+                Thanks for visiting !!!
+                <br>
+                <br>
+                Data Will be uploaded soon.
+              </h1>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -46,6 +55,7 @@
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body">
                 <br>
+                {% if noteslist.thumbnail %}
                 {% for item in noteslist.thumbnail %}
                 <div class="row justify-content-center">
                     <img src="{{item.0}}" alt="">
@@ -58,6 +68,14 @@
                 </div>
                 <br>
                 {% endfor %}
+                {% else %}
+              <h1 style="text-align: center;">
+                Thanks for visiting !!!
+                <br>
+                <br>
+                Data Will be uploaded soon.
+              </h1>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -74,6 +92,7 @@
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
                 <br>
+                {% if pptlist.thumbnail %}
                 {% for item in pptlist.thumbnail %}
                 <div class="row justify-content-center">
                     <img src="{{item.0}}" alt="">
@@ -86,6 +105,14 @@
                 </div>
                 <br>
                 {% endfor %}
+                {% else %}
+              <h1 style="text-align: center;">
+                Thanks for visiting !!!
+                <br>
+                <br>
+                Data Will be uploaded soon.
+              </h1>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -102,6 +129,7 @@
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
               <div class="card-body">
                   <br>
+                  {% if qpaperlist.thumbnail %}
                   {% for item in qpaperlist.thumbnail %}
                   <div class="row justify-content-center">
                       <img src="{{item.0}}" alt="">
@@ -114,6 +142,14 @@
                   </div>
                   <br>
                   {% endfor %}
+                  {% else %}
+              <h1 style="text-align: center;">
+                Thanks for visiting !!!
+                <br>
+                <br>
+                Data Will be uploaded soon.
+              </h1>
+              {% endif %}
               </div>
             </div>
           </div>
