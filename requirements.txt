@@ -8,3 +8,5 @@ sseclient
 gunicorn
 requests-toolbelt
 dj_database_url
+django_storages
+boto3
