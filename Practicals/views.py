@@ -21,7 +21,7 @@ def thumbnail(inp_url):
         url += id
     return url
 
-def extract(sub, data):
+def extract(data):
     result = {}
     thumbnail_list = []
     for item in data:
@@ -44,7 +44,8 @@ def ebooks(request):
     result = {}
     for item in lists:
         if len(lists[item]) == 4:
-            result[item] = extract(item, lists[item]['practical'])
+            if 'practical' in lists[item]:
+                result[item] = extract(lists[item]['practical'])
         else:
             continue
     return render(request, 'Practicals/practicals.html', {'result':result})

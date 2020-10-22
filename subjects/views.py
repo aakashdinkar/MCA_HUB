@@ -158,10 +158,10 @@ def dbmslab(request):
         results = firebase.get(f'Sem {i+1}', '')
         for items in results:
             lists[items] = results[items]
-    result = {}
-    for item in lists['DBMS-Lab']:
-        result[item] = extract(lists['DBMS-Lab'][item])
-    return render(request, 'subjects/DBMS-Lab.html', result)
+    # result = {}
+    # for item in lists['DBMS-Lab']:
+    #     result[item] = extract(lists['DBMS-Lab'][item])
+    return render(request, 'subjects/DBMS-Lab.html', {"result":""})
 
 def ism(request):
     from firebase import firebase
@@ -186,7 +186,10 @@ def it(request):
             lists[items] = results[items]
     result = {}
     for item in lists['Internet Technology']:
-        result[item] = extract(lists['Internet Technology'][item])
+        if lists['Internet Technology'][item]['data']:
+            result[item] = extract(lists['Internet Technology'][item])
+            print(lists['Internet Technology'][item])
+    print(result)
     return render(request, 'subjects/InternetTechnology.html', result)
 
 def ai(request):
@@ -263,10 +266,10 @@ def pmlab(request):
         results = firebase.get(f'Sem {i+1}', '')
         for items in results:
             lists[items] = results[items]
-    result = {}
-    for item in lists['PM-Lab']:
-        result[item] = extract(lists['PM-Lab'][item])
-    return render(request, 'subjects/PM-Lab.html', result)
+    # result = {}
+    # for item in lists['PM-Lab']:
+    #     result[item] = extract(lists['PM-Lab'][item])
+    return render(request, 'subjects/PM-Lab.html', {"result":""})
 
 def pm(request):
     from firebase import firebase
@@ -292,10 +295,10 @@ def project(request):
         results = firebase.get(f'Sem {i+1}', '')
         for items in results:
             lists[items] = results[items]
-    result = {}
-    for item in lists['Projects']:
-        result[item] = extract(lists['Projects'][item])
-    return render(request, 'subjects/Projects.html', result)
+    # result = {}
+    # for item in lists['Projects']:
+    #     result[item] = extract(lists['Projects'][item])
+    return render(request, 'subjects/Projects.html', {"result":""})
 
 def se(request):
     from firebase import firebase
