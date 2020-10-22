@@ -23,8 +23,9 @@
             </div>  
             <br>
             <div class="row justify-content-center">
-                <button class="btn btn-info" onclick="location.href='{{val.1}}'">View</button>
+                <a href="{{val.1}}" target="_blank"><button class="btn btn-info" >View</button></a>
                 <button class="btn btn-info" style="margin-left: 50px;" onclick="location.href = '{{val.2}}'">Download</button>
+                
             </div>
             <br>
             {% endfor %}

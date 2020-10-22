@@ -210,10 +210,11 @@ def javalab(request):
         results = firebase.get(f'Sem {i+1}', '')
         for items in results:
             lists[items] = results[items]
-    result = {}
-    for item in lists['Java-Lab']:
-        result[item] = extract(lists['Java-Lab'][item])
-    return render(request, 'subjects/Java-Lab.html', result)
+    # result = {}
+    # for item in lists['Java-Lab']:
+    #     if lists['Java-Lab'][item]:
+    #         result[item] = extract(lists['Java-Lab'][item])
+    return render(request, 'subjects/Java-Lab.html', {'result':""})
 
 def mfcs(request):
     from firebase import firebase

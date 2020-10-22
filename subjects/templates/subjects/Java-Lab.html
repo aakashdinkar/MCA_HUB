@@ -4,6 +4,7 @@
         <h1>Java-Lab</h1>
     </div>
     <br>
+    {% if result %}
     <div class="accordion" id="accordionExample" style="width: 800px; margin-left: 25%">
         <div class="card">
           <div class="card-header" id="headingOne">
@@ -24,7 +25,7 @@
                 </div>  
                 <br>
                 <div class="row justify-content-center">
-                    <button class="btn btn-info" onclick="location.href='{{item.1}}'">View</button>
+                    <a href="{{item.1}}" target="_blank"><button class="btn btn-info">View</button></a>
                     <button class="btn btn-info" style="margin-left: 50px;" onclick="location.href = '{{item.2}}'">Download</button>
                 </div>
                 <br>
@@ -52,7 +53,7 @@
                 <br>
                 <br>
                 <div class="row justify-content-center">
-                    <button class="btn btn-info" onclick="location.href='{{item.1}}'">View</button>
+                    <a href="{{item.1}}" target="_blank"><button class="btn btn-info">View</button></a>
                     <button class="btn btn-info" style="margin-left: 50px;" onclick="location.href = '{{item.2}}'">Download</button>
                 </div>
                 <br>
@@ -80,7 +81,7 @@
                 <br>
                 <br>
                 <div class="row justify-content-center">
-                    <button class="btn btn-info" onclick="location.href='{{item.1}}'">View</button>
+                    <a href="{{item.1}}" target="_blank"><button class="btn btn-info">View</button></a>
                     <button class="btn btn-info" style="margin-left: 50px;" onclick="location.href = '{{item.2}}'">Download</button>
                 </div>
                 <br>
@@ -108,7 +109,7 @@
                   <br>
                   <br>
                   <div class="row justify-content-center">
-                      <button class="btn btn-info" onclick="location.href='{{item.1}}'">View</button>
+                      <a href="{{item.1}}" target="_blank"><button class="btn btn-info">View</button></a>
                       <button class="btn btn-info" style="margin-left: 50px;" onclick="location.href = '{{item.2}}'">Download</button>
                   </div>
                   <br>
@@ -117,4 +118,13 @@
             </div>
           </div>
       </div>
+    {% else %}
+    <br>
+    <h1 style="text-align: center;">
+      Thanks for visiting !!!
+      <br>
+      <br>
+      Data Will be uploaded soon.
+    </h1>
+    {% endif %}
 {% endblock content %}
