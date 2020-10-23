@@ -173,10 +173,10 @@ def ism(request):
         results = firebase.get(f'Sem {i+1}', '')
         for items in results:
             lists[items] = results[items]
-    result = {}
-    for item in lists['Information Systems Management']:
-        result[item] = extract(lists['Information Systems Management'][item])
-    return render(request, 'subjects/InformationSystemsManagement.html', result)
+    # result = {}
+    # for item in lists['Information Systems Management']:
+    #     result[item] = extract(lists['Information Systems Management'][item])
+    return render(request, 'subjects/InformationSystemsManagement.html', {"result":""})
 
 def it(request):
     from firebase import firebase
