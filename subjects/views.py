@@ -135,7 +135,7 @@ def ds(request):
     result = {}
     for item in lists['Data File And Structures']:
         result[item] = extract(lists['Data File And Structures'][item])
-    return render(request, 'subjects/DataFileandStructures.html', result)
+    return render(request, 'subjects/DataFileAndStructures.html', result)
 
 def dw(request):
     from firebase import firebase
